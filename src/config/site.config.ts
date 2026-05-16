@@ -100,7 +100,7 @@ export const SITE_CONFIG = {
     },
     {
       name: 'Anita Desai',
-      city: 'Mysore',
+      city: 'Bangalore',
       service: 'Nanny',
       rating: 5,
       text: 'Our nanny is wonderful with our toddler. Background-verified and trained. We feel safe and our kid loves her!',

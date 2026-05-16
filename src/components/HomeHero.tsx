@@ -24,7 +24,7 @@ export default function HomeHero() {
 
   return (
     <section
-      className="heroSection relative pt-8 pb-20 px-4 sm:px-6 overflow-hidden"
+      className="heroSection relative pt-8 pb-12 px-4 sm:px-6 overflow-hidden"
       style={{ background: 'linear-gradient(135deg, var(--brand-50) 0%, var(--surface) 50%, var(--brand-50) 100%)' }}
       aria-labelledby="hero-heading"
     >

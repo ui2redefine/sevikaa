@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import { Menu, X , Languages } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site.config';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useLang } from '@/i18n/LanguageContext';
@@ -167,8 +167,8 @@ export default function Navbar() {
               ))}
             </ul>
 
-            <div className="mobileMenuFooter border-t border-subtle pt-4 flex flex-col gap-3">
-              <a
+            <div className="mobileMenuFooter border-t border-subtle pt-4 flex flex-col gap-6">
+              {/* <a
                 href={`tel:${phoneTel}`}
                 className="btn btn-whatsapp w-full btn-lg"
                 aria-label={`Call us at ${phone}`}
@@ -181,7 +181,7 @@ export default function Navbar() {
                 aria-label={`Call us at ${phone2}`}
               >
                 {t('call_cta')} — {phone2}
-              </a>
+              </a> */}
               <Link
                 href="/hire"
                 className="btn btn-primary w-full btn-lg"
@@ -189,8 +189,12 @@ export default function Navbar() {
               >
                 {t('hire_cta')}
               </Link>
-              <div className="flex items-center gap-2 pt-1">
-                <span className="text-xs text-muted font-medium">{t('nav_language')}:</span>
+              <div className="flex items-center gap-4 pt-1">
+                <div className='flex items-center gap-2'>
+                  <span className="text-sm font-medium">{t('nav_language')}:
+                  </span>
+                  <Languages size={20} className="text-muted mr-1 shrink-0" aria-hidden="true" />
+                </div>
                 <LanguageSwitcher />
               </div>
             </div>

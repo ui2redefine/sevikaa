@@ -1,4 +1,5 @@
 'use client';
+import { Suspense } from 'react';
 import HireForm from './HireForm';
 import { SITE_CONFIG } from '@/config/site.config';
 import { useLang } from '@/i18n/LanguageContext';
@@ -26,7 +27,9 @@ export default function HirePageContent() {
 
         {/* Form column */}
         <div className="hireFormCol lg:col-span-2">
-          <HireForm />
+          <Suspense fallback={<div className="card animate-pulse h-96" />}>
+            <HireForm />
+          </Suspense>
         </div>
 
         {/* Sidebar */}

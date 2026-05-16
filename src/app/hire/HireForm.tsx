@@ -1,5 +1,6 @@
 'use client';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Send, CheckCircle2 } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site.config';
 import { useLang } from '@/i18n/LanguageContext';
@@ -12,7 +13,18 @@ const DURATION_OPTIONS = ['Part-time (few hours/day)', 'Full-time (8 hrs/day)', 
 
 export default function HireForm() {
   const { t } = useLang();
-  const SERVICE_OPTIONS = SITE_CONFIG.services.map(s => t(`service_${s.slug.replace(/-/g, '_')}_title`));
+  const searchParams = useSearchParams();
+  const SERVICE_OPTIONS = SITE_CONFIG.services.map(s => ({
+    slug: s.slug,
+    label: t(`service_${s.slug.replace(/-/g, '_')}_title`),
+  }));
+
+  // Pre-select service from ?service=<slug> query param
+  const preselect = useMemo(() => {
+    const slug = searchParams.get('service') ?? '';
+    return SERVICE_OPTIONS.find(s => s.slug === slug)?.label ?? '';
+  }, [searchParams, SERVICE_OPTIONS]);
+
   const [state, setState] = useState<FormState>('idle');
   const [submitError, setSubmitError] = useState('');
   const [errors, setErrors] = useState<FieldErrors>({});
@@ -110,9 +122,10 @@ export default function HireForm() {
           <label htmlFor="hire-service" className="text-sm font-medium text-label">{t('form_hire_service')}</label>
           <select id="hire-service" name="service"
             className={ec('service')} aria-invalid={!!errors.service}
+            defaultValue={preselect}
             onChange={() => setErrors(e => clearError(e, 'service'))}>
             <option value="">Select service...</option>
-            {SERVICE_OPTIONS.map(s => <option key={s} value={s}>{s}</option>)}
+            {SERVICE_OPTIONS.map(({ label }) => <option key={label} value={label}>{label}</option>)}
           </select>
           {errors.service && <p className="field-error-msg" role="alert">{errors.service}</p>}
         </div>

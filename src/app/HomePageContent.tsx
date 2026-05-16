@@ -16,7 +16,7 @@ export default function HomePageContent() {
       <HomeHero />
 
       {/* ── Services ──────────────────────────────────────── */}
-      <section className="homeServices py-20 px-4 sm:px-6 bg-surface" id="services" aria-labelledby="services-heading">
+      <section className="homeServices py-10 px-4 sm:px-6 bg-surface" id="services" aria-labelledby="services-heading">
         <div className="max-w-6xl mx-auto">
           <h2 id="services-heading" className="section-heading">{t('services_heading')}</h2>
           <p className="section-subheading">{t('home_services_sub')}</p>

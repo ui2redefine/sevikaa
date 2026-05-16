@@ -1,5 +1,4 @@
 'use client';
-import { Globe } from 'lucide-react';
 import { useLang } from '@/i18n/LanguageContext';
 import { SITE_CONFIG } from '@/config/site.config';
 import type { LangCode } from '@/i18n/translations';
@@ -8,8 +7,7 @@ export default function LanguageSwitcher() {
   const { lang, setLang } = useLang();
 
   return (
-    <div className="langSwitcher flex items-center gap-0.5" role="navigation" aria-label="Language selector">
-      <Globe size={14} className="text-muted mr-1 shrink-0" aria-hidden="true" />
+    <div className="langSwitcher flex items-center gap-4 flex-1 justify-between md:justify-start" role="navigation" aria-label="Language selector">
       {SITE_CONFIG.languages.map(({ code, label }) => (
         <button
           key={code}
