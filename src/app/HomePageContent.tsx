@@ -116,7 +116,14 @@ export default function HomePageContent() {
               className="btn btn-whatsapp px-8 py-3 flex items-center gap-2"
               aria-label={`Call us at ${SITE_CONFIG.phone}`}
             >
-              <Phone size={16} aria-hidden="true" /> {t('call_cta')}
+              <Phone size={16} aria-hidden="true" /> {SITE_CONFIG.phone}
+            </a>
+            <a
+              href={`tel:${SITE_CONFIG.phoneTel2}`}
+              className="btn btn-whatsapp px-8 py-3 flex items-center gap-2"
+              aria-label={`Call us at ${SITE_CONFIG.phone2}`}
+            >
+              <Phone size={16} aria-hidden="true" /> {SITE_CONFIG.phone2}
             </a>
           </div>
         </div>

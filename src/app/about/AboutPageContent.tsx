@@ -101,8 +101,11 @@ export default function AboutPageContent() {
         <div className="flex gap-4 justify-center flex-wrap">
           <Link href="/hire" className="btn btn-primary">{t('hire_cta')}</Link>
           <Link href="/join" className="btn btn-secondary">{t('join_cta')}</Link>
-          <a href={`tel:${SITE_CONFIG.phoneTel}`} className="btn btn-whatsapp" aria-label={`Call ${name}`}>
-            📞 {t('call_cta')}
+          <a href={`tel:${SITE_CONFIG.phoneTel}`} className="btn btn-whatsapp" aria-label={`Call ${SITE_CONFIG.phone}`}>
+            📞 {SITE_CONFIG.phone}
+          </a>
+          <a href={`tel:${SITE_CONFIG.phoneTel2}`} className="btn btn-whatsapp" aria-label={`Call ${SITE_CONFIG.phone2}`}>
+            📞 {SITE_CONFIG.phone2}
           </a>
         </div>
       </section>

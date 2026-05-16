@@ -20,7 +20,7 @@ const STAT_KEYS = [
 
 export default function HomeHero() {
   const { t } = useLang();
-  const { phone, phoneTel, whatsapp, whatsappMessage, stats } = SITE_CONFIG;
+  const { phone, phoneTel, phone2, phoneTel2, whatsapp, whatsappMessage, stats } = SITE_CONFIG;
 
   return (
     <section
@@ -101,6 +101,31 @@ export default function HomeHero() {
               </div>
               <div className="font-bold text-lg leading-tight" style={{ color: 'var(--accent-600)' }}>
                 {phone}
+              </div>
+            </div>
+          </a>
+
+          <a
+            href={`tel:${phoneTel2}`}
+            className="heroCallCard flex items-center gap-3 w-fit rounded-2xl px-5 py-3 transition-colors group border-2"
+            style={{
+              background: 'var(--surface-accent)',
+              borderColor: 'var(--accent-500)',
+            }}
+            aria-label={`Call us at ${phone2}`}
+          >
+            <div className="relative shrink-0" aria-hidden="true">
+              <span className="absolute inset-0 rounded-full animate-pulse-ring" style={{ background: 'transparent', animationDelay: '0.35s' }} />
+              <div className="relative w-10 h-10 rounded-full flex items-center justify-center shadow animate-pulse-ring" style={{ background: 'var(--accent-500)' }}>
+                <Phone size={18} className="text-white" />
+              </div>
+            </div>
+            <div>
+              <div className="text-xs font-medium" style={{ color: 'var(--gray-500)' }}>
+                {t('call_cta')} — {t('hero_free_consultation')}
+              </div>
+              <div className="font-bold text-lg leading-tight" style={{ color: 'var(--accent-600)' }}>
+                {phone2}
               </div>
             </div>
           </a>
