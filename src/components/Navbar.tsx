@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { Menu, X , Languages } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site.config';
@@ -14,6 +15,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { t } = useLang();
   const { name, phone, phoneTel, phone2, phoneTel2 } = SITE_CONFIG;
+  const pathname = usePathname();
   const navRef = useRef<HTMLElement>(null);
 
   // Close mobile menu when clicking outside the header
@@ -89,16 +91,24 @@ export default function Navbar() {
               className="navLinks hidden lg:flex items-center gap-0.5 text-sm font-medium text-muted flex-1"
               role="list"
             >
-              {NAV_LINKS.map(({ href, label }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="px-3 py-2 rounded-lg hover:bg-surface-subtle hover:text-brand transition-colors"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
+              {NAV_LINKS.map(({ href, label }) => {
+                const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
+                return (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      aria-current={isActive ? 'page' : undefined}
+                      className={`px-3 py-2 rounded-lg transition-colors ${
+                        isActive
+                          ? 'text-brand font-semibold bg-surface-subtle'
+                          : 'hover:bg-surface-subtle hover:text-brand'
+                      }`}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
 
             {/* ── Right controls ── */}
@@ -154,17 +164,25 @@ export default function Navbar() {
               {[...NAV_LINKS,
                 { href: '/hire', label: t('hire_cta') },
                 { href: '/join', label: t('nav_join') },
-              ].map(({ href, label }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className="flex items-center px-4 py-3.5 rounded-xl hover:bg-surface-subtle text-default hover:text-brand font-medium transition-colors text-base"
-                    onClick={() => setOpen(false)}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
+              ].map(({ href, label }) => {
+                const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
+                return (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      aria-current={isActive ? 'page' : undefined}
+                      className={`flex items-center px-4 py-3.5 rounded-xl font-medium transition-colors text-base ${
+                        isActive
+                          ? 'bg-surface-subtle text-brand font-semibold'
+                          : 'hover:bg-surface-subtle text-default hover:text-brand'
+                      }`}
+                      onClick={() => setOpen(false)}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
 
             <div className="mobileMenuFooter border-t border-subtle pt-4 flex flex-col gap-6">

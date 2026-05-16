@@ -6,12 +6,12 @@ import { useLang } from '@/i18n/LanguageContext';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const SOCIAL_LINKS = [
-  { href: SITE_CONFIG.social.facebook,  label: 'Facebook',   abbr: 'f',   color: 'hover:bg-blue-600' },
-  { href: SITE_CONFIG.social.instagram, label: 'Instagram',  abbr: '📷',  color: 'hover:bg-pink-600' },
-  { href: SITE_CONFIG.social.twitter,   label: 'Twitter / X', abbr: '𝕏', color: 'hover:bg-gray-700' },
+  { href: SITE_CONFIG.social.facebook,  label: 'Facebook',   abbr: 'f',   bg: 'bg-[#1877f2]' },
+  { href: SITE_CONFIG.social.instagram, label: 'Instagram',  abbr: '📷',  bg: 'bg-gradient-to-br from-[#f58529] via-[#dd2a7b] to-[#8134af]' },
+  { href: SITE_CONFIG.social.twitter,   label: 'Twitter / X', abbr: '𝕏', bg: 'bg-[#14171a]' },
   {
     href: `https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(SITE_CONFIG.whatsappMessage)}`,
-    label: 'WhatsApp', abbr: '💬', color: 'hover:bg-green-600',
+    label: 'WhatsApp', abbr: '💬', bg: 'bg-[#25d366]',
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Footer() {
           </Link>
           <p className="text-sm leading-relaxed text-gray-400 mb-4">{t('footer_tagline')}</p>
           <div className="footerSocialLinks flex gap-2" role="list" aria-label="Social media links">
-            {SOCIAL_LINKS.filter(s => s.href).map(({ href, label, abbr, color }) => (
+            {SOCIAL_LINKS.filter(s => s.href).map(({ href, label, abbr, bg }) => (
               <a
                 key={label}
                 href={href}
@@ -49,7 +49,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label={`Follow us on ${label}`}
                 role="listitem"
-                className={`w-8 h-8 rounded-full bg-gray-700 ${color} flex items-center justify-center text-xs font-bold text-white transition-colors`}
+                className={`w-9 h-9 rounded-full ${bg} flex items-center justify-center text-xs font-bold text-white transition-opacity hover:opacity-85 shadow-sm`}
               >
                 {abbr}
               </a>

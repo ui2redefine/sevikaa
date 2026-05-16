@@ -44,7 +44,7 @@ export default function ServicesPageContent() {
                   </li>
                 ))}
               </ul>
-                            <Link href={`/hire?service=${slug}`} className="btn btn-primary w-fit mt-2">
+                <Link href={`/hire?service=${slug}`} className="btn btn-primary w-fit mt-2">
                 {t('services_request')} {t(titleKey)} <ArrowRight size={15} />
               </Link>
             </div>
