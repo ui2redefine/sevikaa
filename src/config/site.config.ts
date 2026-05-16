@@ -16,6 +16,8 @@ export const SITE_CONFIG = {
   // ── Contact ────────────────────────────────────────────────
   phone: '+91 77957 12371',
   phoneTel: '+917795712371',
+  phone2: '+91 73971 76361',
+  phoneTel2: '+917397176361',
   email: 'contact@gruhasaathi.com',
   whatsapp: '917795712371',
   whatsappMessage: 'Hi Gruha Saathi! I need help finding a domestic helper.',

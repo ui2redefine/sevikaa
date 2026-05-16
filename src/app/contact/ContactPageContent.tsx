@@ -11,7 +11,7 @@ const HOURS = [
 
 export default function ContactPageContent() {
   const { t } = useLang();
-  const { phone, phoneTel, email, address, whatsapp, whatsappMessage } = SITE_CONFIG;
+  const { phone, phoneTel, phone2, phoneTel2, email, address, whatsapp, whatsappMessage } = SITE_CONFIG;
 
   return (
     <div className="contactPage min-h-screen bg-surface-subtle">
@@ -50,6 +50,20 @@ export default function ContactPageContent() {
               <div>
                 <div className="font-medium">{t('contact_phone_label')}</div>
                 <div className="text-muted">{phone}</div>
+              </div>
+            </a>
+
+            <a
+              href={`tel:${phoneTel2}`}
+              className="flex items-center gap-3 text-sm text-label hover:text-brand transition-colors"
+              aria-label={`Call ${phone2}`}
+            >
+              <div className="w-9 h-9 rounded-full bg-brand-100 flex items-center justify-center shrink-0" aria-hidden="true">
+                <Phone size={15} className="text-brand" />
+              </div>
+              <div>
+                <div className="font-medium">{t('contact_phone_label')}</div>
+                <div className="text-muted">{phone2}</div>
               </div>
             </a>
 

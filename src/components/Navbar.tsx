@@ -13,7 +13,7 @@ import HtmlLangSync from './HtmlLangSync';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { t } = useLang();
-  const { name, phone, phoneTel } = SITE_CONFIG;
+  const { name, phone, phoneTel, phone2, phoneTel2 } = SITE_CONFIG;
   const navRef = useRef<HTMLElement>(null);
 
   // Close mobile menu when clicking outside the header
@@ -120,7 +120,7 @@ export default function Navbar() {
                 </Link>
               </div>
 
-              {/* Mobile: call emoji + hamburger */}
+              {/* Mobile: call links + hamburger */}
               <a
                 href={`tel:${phoneTel}`}
                 className="lg:hidden p-2 rounded-lg text-muted hover:text-brand hover:bg-surface-subtle transition-colors text-base leading-none"
@@ -174,6 +174,13 @@ export default function Navbar() {
                 aria-label={`Call us at ${phone}`}
               >
                 {t('call_cta')} — {phone}
+              </a>
+              <a
+                href={`tel:${phoneTel2}`}
+                className="btn btn-whatsapp w-full btn-lg"
+                aria-label={`Call us at ${phone2}`}
+              >
+                {t('call_cta')} — {phone2}
               </a>
               <Link
                 href="/hire"

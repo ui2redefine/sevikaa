@@ -17,7 +17,7 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
   const { t } = useLang();
-  const { name, phone, phoneTel, email, address } = SITE_CONFIG;
+  const { name, phone, phoneTel, phone2, phoneTel2, email, address } = SITE_CONFIG;
 
   const SERVICE_LINKS = SITE_CONFIG.services.map(s => ({ href: `/services#${s.slug}`, label: t(`service_${s.slug.replace(/-/g, '_')}_title`) }));
   const QUICK_LINKS = [
@@ -84,6 +84,11 @@ export default function Footer() {
             <li>
               <a href={`tel:${phoneTel}`} className="flex items-start gap-2 hover:text-orange-400 transition-colors font-medium text-green-400" aria-label={`Call us at ${phone}`}>
                 <Phone size={15} className="mt-0.5 shrink-0" aria-hidden="true" />{phone}
+              </a>
+            </li>
+            <li>
+              <a href={`tel:${phoneTel2}`} className="flex items-start gap-2 hover:text-orange-400 transition-colors font-medium text-green-400" aria-label={`Call us at ${phone2}`}>
+                <Phone size={15} className="mt-0.5 shrink-0" aria-hidden="true" />{phone2}
               </a>
             </li>
             <li>

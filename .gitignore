@@ -48,3 +48,11 @@ next-env.d.ts
 .env.local
 .next/
 node_modules/
+
+# next-pwa generated files
+public/sw.js
+public/workbox-*.js
+public/worker-*.js
+public/fallback-*.js
+public/sw.js.map
+public/workbox-*.js.map
