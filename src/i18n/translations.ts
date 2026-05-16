@@ -172,6 +172,10 @@ export const TRANSLATIONS: Record<LangCode, Record<string, string>> = {
 
     // ── Shared ───────────────────────────────────────────────
     form_error_generic: 'Something went wrong. Please try again.',
+    form_err_required: 'This field is required.',
+    form_err_phone: 'Enter a valid 10-digit phone number.',
+    form_err_email: 'Enter a valid email address.',
+    form_err_message_short: 'Message must be at least 10 characters.',
 
     // ── PWA Install Prompt ───────────────────────────────────
     pwa_tagline: 'Your Trusted Home Care Partner',
@@ -393,6 +397,10 @@ export const TRANSLATIONS: Record<LangCode, Record<string, string>> = {
     form_join_sent_body: 'ನೋಂದಣಿಗಾಗಿ ಧನ್ಯವಾದ. ನಮ್ಮ ತಂಡ 24 ಗಂಟೆಯಲ್ಲಿ ಸಂಪರ್ಕಿಸುತ್ತದೆ.',
     // ── Shared ───────────────────────────────────────────────
     form_error_generic: 'ಏನೋ ತಪ್ಪಾಗಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.',
+    form_err_required: 'ಈ ಮಾಹಿತಿ ಅಗತ್ಯವಿದೆ.',
+    form_err_phone: 'ಮಾನ್ಯ 10-ಅಂಕಿ ಫೋನ್ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ.',
+    form_err_email: 'ಮಾನ್ಯ ಇಮೇಲ್ ವಿಳಾಸ ನಮೂದಿಸಿ.',
+    form_err_message_short: 'ಸಂದೇಶ ಕನಿಷ್ಠ 10 ಅಕ್ಷರಗಳಿರಬೇಕು.',
 
     // ── PWA Install Prompt ───────────────────────────────────
     pwa_tagline: 'ನಿಮ್ಮ ವಿಶ್ವಾಸಾರ್ಹ ಗೃಹ ಸೇವಾ ಪಾಲುದಾರ',
@@ -612,6 +620,10 @@ export const TRANSLATIONS: Record<LangCode, Record<string, string>> = {
     form_join_sent_body: 'पंजीकरण के लिए धन्यवाद। हमारी टीम 24 घंटों में संपर्क करेगी।',
     // ── Shared ───────────────────────────────────────────────
     form_error_generic: 'कुछ गलत हुआ। कृपया पुनः प्रयास करें।',
+    form_err_required: 'यह जानकारी आवश्यक है।',
+    form_err_phone: 'वैध 10-अंकीय फ़ोन नंबर दर्ज करें।',
+    form_err_email: 'वैध ईमेल पता दर्ज करें।',
+    form_err_message_short: 'संदेश कम से कम 10 अक्षरों का होना चाहिए।',
 
     // ── PWA Install Prompt ───────────────────────────────────
     pwa_tagline: 'आपका विश्वसनीय होम केयर पार्टनर',

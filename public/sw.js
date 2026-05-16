@@ -4,7 +4,7 @@
  * Offline fallback served from cache when network unavailable.
  */
 
-const CACHE_NAME = 'gs-v1';
+const CACHE_NAME = 'gs-v2';
 
 /** Pages to pre-cache on install */
 const PRECACHE_URLS = [
@@ -33,8 +33,15 @@ self.addEventListener('activate', (event) => {
       .then(keys => Promise.all(
         keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)),
       ))
-      .then(() => self.clients.claim()),
+      .then(() => self.clients.claim())
+      .then(() => self.clients.matchAll({ type: 'window' })
+        .then(clients => clients.forEach(c => c.postMessage({ type: 'SW_UPDATED' })))),
   );
+});
+
+// ── Message: allow controlled skip-waiting ────────────────────────────────
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'SKIP_WAITING') self.skipWaiting();
 });
 
 // ── Fetch: cache-first for same-origin GET requests ───────────────────────

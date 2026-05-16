@@ -105,7 +105,7 @@ export default function Navbar() {
             <div className="navControls flex items-center gap-1.5 shrink-0">
               {/* Utility icons — dark mode + colour theme (dev only) + lang */}
               <ThemeToggle />
-              <ColorThemePicker />
+              {process.env.NODE_ENV !== "production" && <ColorThemePicker />}
               <div className="hidden lg:block">
                 <LanguageSwitcher />
               </div>

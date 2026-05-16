@@ -40,7 +40,7 @@ export const SITE_CONFIG = {
 
   // ── Stats ─────────────────────────────────────────────────
   stats: [
-    { value: '500+' },
+    { value: '50+' },
     { value: '100+' },
     { value: '98%'  },
     { value: '4.9★' },

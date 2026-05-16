@@ -266,6 +266,13 @@
     border-color: var(--brand-500);
     box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-500) 20%, transparent);
   }
+  .input-field.input-error {
+    border-color: var(--color-error-text, #dc2626);
+    box-shadow: 0 0 0 3px color-mix(in srgb, #dc2626 15%, transparent);
+  }
+  .field-error-msg {
+    font-size: 0.75rem; color: #dc2626; margin-top: 0.125rem;
+  }
 
   /* ── Badges ── */
   .badge {
