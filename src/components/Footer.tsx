@@ -5,13 +5,15 @@ import { SITE_CONFIG } from '@/config/site.config';
 import { useLang } from '@/i18n/LanguageContext';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
+const NEUTRAL_SOCIAL = 'bg-white/10 hover:bg-white/20';
+
 const SOCIAL_LINKS = [
-  { href: SITE_CONFIG.social.facebook,  label: 'Facebook',   abbr: 'f',   bg: 'bg-[#1877f2]' },
-  { href: SITE_CONFIG.social.instagram, label: 'Instagram',  abbr: '📷',  bg: 'bg-gradient-to-br from-[#f58529] via-[#dd2a7b] to-[#8134af]' },
-  { href: SITE_CONFIG.social.twitter,   label: 'Twitter / X', abbr: '𝕏', bg: 'bg-[#14171a]' },
+  { href: SITE_CONFIG.social.facebook,  label: 'Facebook',    abbr: 'f',  bg: NEUTRAL_SOCIAL },
+  { href: SITE_CONFIG.social.instagram, label: 'Instagram',   abbr: 'IG', bg: NEUTRAL_SOCIAL },
+  { href: SITE_CONFIG.social.twitter,   label: 'Twitter / X', abbr: '𝕏', bg: NEUTRAL_SOCIAL },
   {
     href: `https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(SITE_CONFIG.whatsappMessage)}`,
-    label: 'WhatsApp', abbr: '💬', bg: 'bg-[#25d366]',
+    label: 'WhatsApp', abbr: 'WA', bg: 'bg-[#25d366] hover:opacity-90',
   },
 ];
 

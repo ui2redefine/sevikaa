@@ -2,7 +2,7 @@
 import ContactForm from './ContactForm';
 import { SITE_CONFIG } from '@/config/site.config';
 import { useLang } from '@/i18n/LanguageContext';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 const HOURS = [
   { dayKey: 'Monday – Saturday', time: '8:00 AM – 8:00 PM' },
@@ -74,7 +74,7 @@ export default function ContactPageContent() {
               aria-label="Chat on WhatsApp"
             >
               <div className="w-9 h-9 rounded-full bg-green-100 flex items-center justify-center shrink-0" aria-hidden="true">
-                <span className="text-green-600 font-bold text-xs">WA</span>
+                <MessageCircle size={15} className="text-green-600" />
               </div>
               <div>
                 <div className="font-medium">{t('contact_wa_label')}</div>

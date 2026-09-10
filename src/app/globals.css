@@ -56,6 +56,9 @@
   --btn-py: 0.75rem;
   --btn-px-sm: 1rem;
   --btn-py-sm: 0.5rem;
+
+  /* Vertical rhythm — one knob for every section's top/bottom padding */
+  --section-py: clamp(3rem, 8vw, 5.5rem);
 }
 
 /* ─── Dark mode token overrides ────────────────────────────
@@ -156,6 +159,15 @@
   .border-accent      { border-color: var(--accent-500); }
   /* Brand gradient — for CTA banners & stats sections */
   .bg-brand-gradient  { background: linear-gradient(135deg, var(--brand-800), var(--brand-900)); }
+  .bg-brand-900       { background-color: var(--brand-900); }
+
+  /* Consistent section rhythm — replaces ad-hoc py-14/16/20 */
+  .section-y { padding-block: var(--section-py); }
+
+  /* Hero backdrop — flips cleanly between light and dark */
+  .hero-surface {
+    background: linear-gradient(135deg, var(--surface-subtle) 0%, var(--surface) 55%, var(--surface-subtle) 100%);
+  }
 }
 
 @layer utilities {
@@ -246,12 +258,25 @@
 
   /* ── Section headings ── */
   .section-heading {
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
-    font-weight: 800; color: var(--gray-900); text-align: center;
+    font-size: clamp(1.625rem, 3.6vw, 2.125rem);
+    font-weight: 700; color: var(--gray-900); text-align: center;
+    letter-spacing: -0.01em;
   }
   .section-subheading {
     font-size: 1rem; color: var(--gray-500); text-align: center;
     max-width: 42rem; margin: 0.75rem auto 0;
+  }
+
+  /* ── Icon chip ── rounded tinted square that holds a lucide icon ── */
+  .icon-chip {
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: var(--radius-md);
+    background: var(--brand-100); color: var(--brand-700);
+    flex-shrink: 0;
+  }
+  [data-mode="dark"] .icon-chip {
+    background: color-mix(in srgb, var(--brand-500) 18%, transparent);
+    color: var(--brand-200);
   }
 
   /* ── Form inputs ── */

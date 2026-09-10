@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site.config';
 import { useLang } from '@/i18n/LanguageContext';
+import { SERVICE_ICONS } from '@/components/serviceIcons';
 
 export default function ServicesPageContent() {
   const { t } = useLang();
@@ -12,7 +13,7 @@ export default function ServicesPageContent() {
     <div className="servicesPage min-h-screen">
 
       {/* ── Page header ───────────────────────────────────── */}
-      <section className="servicesHero bg-surface-subtle py-16 px-4 sm:px-6 text-center" aria-labelledby="services-page-heading">
+      <section className="servicesHero bg-surface-subtle section-y px-4 sm:px-6 text-center" aria-labelledby="services-page-heading">
         <h1 id="services-page-heading" className="text-4xl md:text-5xl font-extrabold text-strong mb-4">
           {t('services_page_heading')}
         </h1>
@@ -22,18 +23,21 @@ export default function ServicesPageContent() {
       </section>
 
       {/* ── Services list ─────────────────────────────────── */}
-      <section className="servicesGrid py-16 px-4 sm:px-6 max-w-5xl mx-auto flex flex-col gap-16">
-        {services.map(({ slug, icon, features }) => {
+      <section className="servicesGrid section-y px-4 sm:px-6 max-w-5xl mx-auto flex flex-col gap-14">
+        {services.map(({ slug, features }) => {
           const titleKey = `service_${slug.replace(/-/g, '_')}_title`;
           const fullKey  = `service_${slug.replace(/-/g, '_')}_full`;
+          const Icon = SERVICE_ICONS[slug];
           return (
           <article
             key={slug}
             id={slug}
-            className="serviceItem flex flex-col md:flex-row gap-8 items-start scroll-mt-24"
+            className="serviceItem flex flex-col md:flex-row gap-6 md:gap-8 items-start scroll-mt-24"
             aria-labelledby={`service-${slug}`}
           >
-            <div className="text-6xl shrink-0" aria-hidden="true">{icon}</div>
+            <span className="icon-chip w-14 h-14" aria-hidden="true">
+              <Icon size={28} />
+            </span>
             <div className="serviceItemBody flex flex-col gap-4">
               <h2 id={`service-${slug}`} className="text-2xl font-bold text-strong">{t(titleKey)}</h2>
               <p className="text-default leading-relaxed">{t(fullKey)}</p>

@@ -79,11 +79,11 @@ export default function Navbar() {
                 alt=""
                 width={36}
                 height={36}
-                className="rounded-xl object-contain shrink-0"
+                className="hidden sm:block rounded-xl object-contain shrink-0"
                 priority
                 aria-hidden="true"
               />
-              <span className="font-bold text-base text-brand">{name}</span>
+              <span className="font-bold text-lg tracking-tight text-brand">{name}</span>
             </Link>
 
             {/* ── Desktop nav links ── */}
