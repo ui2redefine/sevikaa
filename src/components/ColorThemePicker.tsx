@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '@/config/site.config';
 
 // ── Constants ──────────────────────────────────────────────────────────────
 const THEME_LABELS: Record<ColorTheme, string> = {
-  default: 'Blue', emerald: 'Emerald', rose: 'Rose',
+  default: 'Pink', emerald: 'Emerald', rose: 'Rose',
   saffron: 'Saffron', slate: 'Slate', teal: 'Teal', violet: 'Violet',
 };
 

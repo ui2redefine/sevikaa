@@ -4,7 +4,7 @@
  * All colour themes scoped to [data-color-theme="X"] on <html>.
  * Import this file once in globals.css.
  * Activate a theme by setting: document.documentElement.setAttribute('data-color-theme', 'emerald')
- * Default (blue) needs no attribute — it's defined in the :root block in globals.css.
+ * Default (pink) needs no attribute — it's defined in the :root block in globals.css.
  */
 
 /* ── Emerald ─────────────────────────────────────────────── */

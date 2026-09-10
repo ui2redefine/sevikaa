@@ -125,7 +125,7 @@ export const SITE_CONFIG = {
   ogImage: '/og-image.png',
   twitterHandle: '@sevikaa',
   /** PWA / browser tab theme colour — matches --brand-700 in globals.css */
-  themeColor: '#047857',
+  themeColor: '#9e3a61',
   keywords: [
     'domestic helpers Bangalore',
     'house maid Bangalore',
@@ -150,7 +150,7 @@ export const SITE_CONFIG = {
   // ── Colour theme swatches (= --brand-700 per theme) ───────
   // Used by ColorThemePicker; update if theme CSS vars change.
   themePrimaries: {
-    default: '#047857',
+    default: '#9e3a61',
     emerald: '#047857',
     rose:    '#be123c',
     saffron: '#c2410c',

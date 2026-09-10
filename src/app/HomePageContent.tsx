@@ -90,16 +90,16 @@ export default function HomePageContent() {
       </section>
 
       {/* ── CTA Banner ────────────────────────────────────── */}
-      <section className="homeCta py-16 px-4 sm:px-6 bg-brand-gradient text-white" aria-labelledby="cta-heading">
+      <section className="homeCta py-16 px-4 sm:px-6 bg-surface-subtle" aria-labelledby="cta-heading">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
-          <h2 id="cta-heading" className="text-3xl md:text-4xl font-extrabold">{t('home_cta_heading')}</h2>
-          <p className="text-brand-light text-lg max-w-xl">
+          <h2 id="cta-heading" className="text-3xl md:text-4xl font-extrabold text-strong">{t('home_cta_heading')}</h2>
+          <p className="text-muted text-lg max-w-xl">
             {t('home_cta_sub')} {name} {t('home_cta_sub2')}
           </p>
           <div className="homeCtaActions flex flex-wrap gap-4 justify-center">
             <Link
               href="/hire"
-              className="bg-surface text-brand font-semibold px-8 py-3 rounded-full hover:opacity-90 transition-opacity shadow-md"
+              className="btn btn-primary px-8 py-3"
             >
               {t('home_hire_today')}
             </Link>

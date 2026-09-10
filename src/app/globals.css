@@ -9,19 +9,19 @@
    To rebrand: swap --brand-* values below.
 ─────────────────────────────────────────────────────────── */
 :root {
-  /* Primary brand — blue */
-  --brand-50:  #ecfdf5;
-  --brand-100: #d1fae5;
-  --brand-200: #a7f3d0;
-  --brand-500: #10b981;
-  --brand-600: #059669;
-  --brand-700: #047857;
-  --brand-800: #065f46;
-  --brand-900: #064e3b;
+  /* Primary brand — pink, from the Sevikaa logo */
+  --brand-50:  #fdf2f6;
+  --brand-100: #fbe0ec;
+  --brand-200: #f5bfd5;
+  --brand-500: #d65b8a;
+  --brand-600: #bf4574;
+  --brand-700: #9e3a61;
+  --brand-800: #7f2f4e;
+  --brand-900: #66273f;
 
-  /* Accent — green for WhatsApp / call actions */
-  --accent-500: #22c55e;
-  --accent-600: #16a34a;
+  /* Accent — deeper pink */
+  --accent-500: #be185d;
+  --accent-600: #9d174d;
 
   /* Neutrals */
   --gray-50:  #f9fafb;
@@ -65,21 +65,21 @@
 [data-mode="dark"] {
   color-scheme: dark;
 
-  --surface:        #0d1117;   /* page background — deepest */
-  --surface-raised: #161b22;   /* cards, modals — visibly lifted */
-  --surface-subtle: #1c2333;   /* section alternates, inputs */
-  --surface-accent: color-mix(in srgb, var(--accent-500) 12%, #161b22);
+  --surface:        #161418;   /* page background — deepest */
+  --surface-raised: #211d24;   /* cards, modals — visibly lifted */
+  --surface-subtle: #2a242e;   /* section alternates, inputs */
+  --surface-accent: color-mix(in srgb, var(--accent-500) 12%, #211d24);
 
   /* Remap grays so text is crisp and layered */
-  --gray-50:  #1c2333;         /* background inputs */
-  --gray-100: #30363d;         /* borders, dividers */
-  --gray-200: #484f58;         /* strong borders */
-  --gray-400: #8b949e;         /* placeholder text */
-  --gray-500: #8b949e;         /* muted text */
-  --gray-600: #b1bac4;         /* label text */
-  --gray-700: #c9d1d9;         /* body text */
-  --gray-800: #e6edf3;         /* strong text */
-  --gray-900: #f0f6fc;         /* headings */
+  --gray-50:  #2a242e;         /* background inputs */
+  --gray-100: #3a343f;         /* borders, dividers */
+  --gray-200: #4d4551;         /* strong borders */
+  --gray-400: #9a929c;         /* placeholder text */
+  --gray-500: #9a929c;         /* muted text */
+  --gray-600: #bfb6c1;         /* label text */
+  --gray-700: #d6ccd7;         /* body text */
+  --gray-800: #ece5ed;         /* strong text */
+  --gray-900: #f7f2f7;         /* headings */
 
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / .4);
   --shadow-md: 0 4px 12px -2px rgb(0 0 0 / .6);
@@ -150,12 +150,12 @@
   .text-strong        { color: var(--gray-900); }
   .text-label         { color: var(--gray-700); }
   .text-accent        { color: var(--accent-500); }
-  .text-brand-light   { color: var(--brand-200); }
+  .text-brand-light   { color: var(--brand-100); }
   .border-subtle      { border-color: var(--gray-100); }
   .border-default     { border-color: var(--gray-200); }
   .border-accent      { border-color: var(--accent-500); }
   /* Brand gradient — for CTA banners & stats sections */
-  .bg-brand-gradient  { background: linear-gradient(135deg, var(--brand-700), var(--brand-900)); }
+  .bg-brand-gradient  { background: linear-gradient(135deg, var(--brand-800), var(--brand-900)); }
 }
 
 @layer utilities {
