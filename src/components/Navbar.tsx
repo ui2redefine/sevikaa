@@ -59,7 +59,7 @@ export default function Navbar() {
 
       <header
         ref={navRef}
-        className="navRoot sticky z-50 bg-surface border-b border-subtle shadow-sm backdrop-blur-md"
+        className="navRoot sticky z-50 bg-surface border-b border-subtle shadow-sm"
         style={{ top: 'env(safe-area-inset-top)' }}
         role="banner"
       >
@@ -133,14 +133,14 @@ export default function Navbar() {
               {/* Mobile: call links + hamburger */}
               <a
                 href={`tel:${phoneTel}`}
-                className="lg:hidden p-2 rounded-lg text-muted hover:text-brand hover:bg-surface-subtle transition-colors text-base leading-none"
+                className="lg:hidden min-w-11 min-h-11 flex items-center justify-center rounded-lg text-muted hover:text-brand hover:bg-surface-subtle transition-colors text-base leading-none"
                 aria-label={`Call ${phone}`}
               >
                 📞
               </a>
               <button
                 onClick={() => setOpen(v => !v)}
-                className="lg:hidden p-2 rounded-lg hover:bg-surface-subtle text-default transition-colors"
+                className="lg:hidden min-w-11 min-h-11 flex items-center justify-center rounded-lg hover:bg-surface-subtle text-default transition-colors"
                 aria-expanded={open}
                 aria-controls="mobile-menu"
                 aria-label={open ? 'Close menu' : 'Open menu'}

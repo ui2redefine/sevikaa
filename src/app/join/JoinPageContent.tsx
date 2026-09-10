@@ -14,7 +14,7 @@ export default function JoinPageContent() {
   ] as const;
 
   return (
-    <div className="joinPage min-h-screen bg-surface-subtle">
+    <div className="joinPage min-h-screen min-h-dvh bg-surface-subtle">
 
       {/* ── Page hero ─────────────────────────────────────── */}
       <section className="joinHero bg-surface-subtle py-14 px-4 sm:px-6 text-center" aria-labelledby="join-heading">

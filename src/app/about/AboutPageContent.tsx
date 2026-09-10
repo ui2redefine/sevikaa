@@ -21,7 +21,7 @@ export default function AboutPageContent() {
   ] as const;
 
   return (
-    <div className="aboutPage min-h-screen">
+    <div className="aboutPage min-h-screen min-h-dvh">
 
       {/* ── Hero ──────────────────────────────────────────── */}
       <section className="aboutHero bg-surface-subtle section-y px-4 sm:px-6" aria-labelledby="about-heading">

@@ -11,7 +11,7 @@ export default function ServicesPageContent() {
   const { services, whatsapp, whatsappMessage } = SITE_CONFIG;
 
   return (
-    <div className="servicesPage min-h-screen">
+    <div className="servicesPage min-h-screen min-h-dvh">
 
       {/* ── Page header ───────────────────────────────────── */}
       <section className="servicesHero bg-surface-subtle section-y px-4 sm:px-6 text-center" aria-labelledby="services-page-heading">

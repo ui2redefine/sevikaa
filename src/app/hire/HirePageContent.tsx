@@ -10,7 +10,7 @@ export default function HirePageContent() {
   const { phone, phoneTel, email, whatsapp, whatsappMessage } = SITE_CONFIG;
 
   return (
-    <div className="hirePage min-h-screen bg-surface-subtle">
+    <div className="hirePage min-h-screen min-h-dvh bg-surface-subtle">
 
       {/* ── Page hero ─────────────────────────────────────── */}
       <section className="hireHero bg-surface-subtle py-14 px-4 sm:px-6 text-center" aria-labelledby="hire-heading">

@@ -14,7 +14,7 @@ export default function ContactPageContent() {
   const { phone, phoneTel, email, address, whatsapp, whatsappMessage } = SITE_CONFIG;
 
   return (
-    <div className="contactPage min-h-screen bg-surface-subtle">
+    <div className="contactPage min-h-screen min-h-dvh bg-surface-subtle">
 
       {/* ── Page hero ─────────────────────────────────────── */}
       <section className="contactHero bg-surface-subtle py-14 px-4 sm:px-6 text-center" aria-labelledby="contact-heading">
