@@ -95,9 +95,7 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-2">
               <MapPin size={15} className="mt-0.5 shrink-0 text-brand-light" aria-hidden="true" />
-              <a href={address.mapLink} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                {address.street}, {address.city}, {address.state} {address.pincode}
-              </a>
+              <span>{address.city}, {address.state}</span>
             </li>
           </ul>
         </div>

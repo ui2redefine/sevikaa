@@ -22,12 +22,9 @@ export const SITE_CONFIG = {
 
   // ── Address ────────────────────────────────────────────────
   address: {
-    street: '#71, 1st Floor, Country Nest, STS Road, Sathnur Village Bagalur',
     city: 'Bengaluru',
     state: 'Karnataka',
-    pincode: '560063',
     country: 'India',
-    mapLink: 'https://maps.google.com/?q=Bagaluru+Bengaluru+Karnataka',
   },
 
   // ── Social ────────────────────────────────────────────────
@@ -72,11 +69,6 @@ export const SITE_CONFIG = {
       slug: 'patient-care',
       icon: '🏥',
       features: ['Post-surgery care', 'Medication management', 'Hygiene assistance', 'Doctor coordination'],
-    },
-    {
-      slug: 'live-in-helper',
-      icon: '🏡',
-      features: ['24x7 support', 'All-in-one domestic help', 'Long-term placements', 'Pre-screened & trained'],
     },
   ],
 

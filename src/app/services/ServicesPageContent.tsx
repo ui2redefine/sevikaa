@@ -34,7 +34,7 @@ export default function ServicesPageContent() {
           <article
             key={slug}
             id={slug}
-            className={`serviceItem flex flex-col ${i % 2 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-6 md:gap-10 md:items-center scroll-mt-24`}
+            className={`serviceItem card p-4 sm:p-5 flex flex-col ${i % 2 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-5 md:gap-7 md:items-center scroll-mt-24`}
             aria-labelledby={`service-${slug}`}
           >
             {image ? (
@@ -43,17 +43,17 @@ export default function ServicesPageContent() {
                 alt={t(titleKey)}
                 width={750}
                 height={900}
-                className="w-full md:w-72 lg:w-80 shrink-0 rounded-2xl object-cover aspect-[4/3] md:aspect-[3/4] shadow-md"
+                className="w-full md:w-60 lg:w-72 shrink-0 rounded-xl object-cover aspect-[5/6]"
               />
             ) : (
               <div
-                className="icon-chip w-full md:w-72 lg:w-80 shrink-0 rounded-2xl shadow-md aspect-[4/3] md:aspect-[3/4]"
+                className="icon-chip w-full md:w-60 lg:w-72 shrink-0 rounded-xl aspect-[5/6]"
                 aria-hidden="true"
               >
                 <Icon size={56} />
               </div>
             )}
-            <div className="serviceItemBody flex flex-col gap-4">
+            <div className="serviceItemBody flex flex-col gap-4 flex-1">
               <h2 id={`service-${slug}`} className="text-2xl font-bold text-strong">{t(titleKey)}</h2>
               <p className="text-default leading-relaxed">{t(fullKey)}</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2" aria-label={`Features of ${t(titleKey)}`}>

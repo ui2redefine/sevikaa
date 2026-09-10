@@ -10,7 +10,7 @@ export default function WhatsAppFAB() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="whatsappFab fixed z-40 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-green-300 group"
+      className="whatsappFab fixed z-40 flex items-center gap-2 bg-brand hover:bg-[var(--brand-800)] text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-[var(--brand-200)] group"
       style={{ bottom: 'calc(1.5rem + env(safe-area-inset-bottom))', right: 'calc(1.5rem + env(safe-area-inset-right))' }}
       aria-label="Chat with us on WhatsApp"
     >

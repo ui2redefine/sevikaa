@@ -15,10 +15,8 @@ export default function JsonLd() {
     logo: `${SITE_CONFIG.url}/logo.jpg`,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: SITE_CONFIG.address.street,
       addressLocality: SITE_CONFIG.address.city,
       addressRegion: SITE_CONFIG.address.state,
-      postalCode: SITE_CONFIG.address.pincode,
       addressCountry: SITE_CONFIG.address.country,
     },
     geo: {

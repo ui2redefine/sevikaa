@@ -82,20 +82,15 @@ export default function ContactPageContent() {
               </div>
             </a>
 
-            <a
-              href={address.mapLink}
-              target="_blank" rel="noopener noreferrer"
-              className="flex items-start gap-3 text-sm text-label hover:text-brand transition-colors"
-              aria-label="View location on map"
-            >
+            <div className="flex items-start gap-3 text-sm text-label">
               <div className="w-9 h-9 rounded-full bg-brand-100 flex items-center justify-center shrink-0 mt-0.5" aria-hidden="true">
                 <MapPin size={15} className="text-brand" />
               </div>
               <div>
                 <div className="font-medium">{t('contact_address_label')}</div>
-                <div className="text-muted">{address.street}, {address.city}, {address.state} {address.pincode}</div>
+                <div className="text-muted">{address.city}, {address.state}</div>
               </div>
-            </a>
+            </div>
           </div>
 
           {/* Hours */}

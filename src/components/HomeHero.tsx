@@ -113,7 +113,7 @@ export default function HomeHero() {
             height={900}
             priority
             sizes="(max-width: 1024px) 28rem, 40vw"
-            className="w-full rounded-3xl object-cover aspect-[4/5] shadow-xl"
+            className="w-full rounded-3xl object-cover aspect-[5/6] shadow-xl"
           />
           <div className="absolute -bottom-5 left-4 sm:-left-5 flex items-center gap-3 rounded-2xl bg-surface border border-subtle shadow-lg px-4 py-3">
             <span className="flex items-center gap-1 text-2xl font-extrabold text-brand">

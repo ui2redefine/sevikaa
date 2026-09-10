@@ -79,7 +79,7 @@ export default function Navbar() {
                 alt=""
                 width={36}
                 height={36}
-                className="hidden sm:block rounded-xl object-contain shrink-0"
+                className="rounded-xl object-contain shrink-0"
                 priority
                 aria-hidden="true"
               />

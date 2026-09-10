@@ -23,7 +23,7 @@ export default function ServiceCard({ title, shortDesc, slug }: Props) {
       className="serviceCard card p-0 overflow-hidden flex flex-col group hover:-translate-y-1 transition-transform duration-300"
       aria-labelledby={`service-card-${slug}`}
     >
-      <div className={`relative aspect-[16/10] w-full flex items-center justify-center overflow-hidden ${image ? 'bg-brand-50' : 'icon-chip rounded-none'}`}>
+      <div className={`relative aspect-[5/6] w-full flex items-center justify-center overflow-hidden ${image ? 'bg-brand-50' : 'icon-chip rounded-none'}`}>
         {image ? (
           <Image
             src={image}
