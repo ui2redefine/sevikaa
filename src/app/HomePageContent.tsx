@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MessageCircle } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site.config';
 import { useLang } from '@/i18n/LanguageContext';
@@ -8,13 +9,32 @@ import TestimonialCard from '@/components/TestimonialCard';
 import HomeHero from '@/components/HomeHero';
 import { HOW_IT_WORKS_ICONS } from '@/components/serviceIcons';
 
+const STAT_KEYS = [
+  'stat_happy_families',
+  'stat_verified_helpers',
+  'stat_satisfaction',
+  'stat_rating',
+] as const;
+
 export default function HomePageContent() {
   const { t } = useLang();
-  const { name, services, testimonials, howItWorks } = SITE_CONFIG;
+  const { name, services, testimonials, howItWorks, stats } = SITE_CONFIG;
 
   return (
     <>
       <HomeHero />
+
+      {/* ── Stats strip ───────────────────────────────────── */}
+      <section className="homeStatsStrip bg-surface border-b border-subtle py-8 sm:py-10 px-4 sm:px-6" aria-label="Company statistics">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+          {stats.map(({ value }, i) => (
+            <div key={value}>
+              <div className="text-3xl font-extrabold text-brand">{value}</div>
+              <div className="text-sm text-muted mt-0.5">{t(STAT_KEYS[i])}</div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* ── Services ──────────────────────────────────────── */}
       <section className="homeServices section-y px-4 sm:px-6 bg-surface" id="services" aria-labelledby="services-heading">
@@ -70,6 +90,26 @@ export default function HomePageContent() {
       </section>
 
       {/* ── Testimonials ──────────────────────────────────── */}
+      {/* ── Feature band — full-bleed image ───────────────── */}
+      <section className="homeFeatureBand relative overflow-hidden" aria-labelledby="feature-band-heading">
+        <Image
+          src="/services/elder-care.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#12192e]/60" aria-hidden="true" />
+        <div className="relative max-w-2xl mx-auto text-center text-white flex flex-col items-center gap-4 py-24 sm:py-32 px-4">
+          <h2 id="feature-band-heading" className="text-3xl sm:text-4xl font-bold text-white">{t('home_band_heading')}</h2>
+          <p className="text-white/85 text-lg max-w-lg">{t('home_band_sub')}</p>
+          <Link href="/services" className="btn bg-surface text-brand hover:opacity-90 px-7 mt-2">
+            {t('home_view_all')} <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* ── Testimonials ──────────────────────────────────── */}
       <section className="homeTestimonials section-y px-4 sm:px-6 bg-surface" aria-labelledby="reviews-heading">
         <div className="max-w-6xl mx-auto">
           <h2 id="reviews-heading" className="section-heading">{t('reviews_heading')}</h2>
@@ -105,8 +145,6 @@ export default function HomePageContent() {
           <p className="text-brand-light text-sm">
             {t('call_cta')}:{' '}
             <a href={`tel:${SITE_CONFIG.phoneTel}`} className="font-semibold text-white hover:underline">{SITE_CONFIG.phone}</a>
-            {' · '}
-            <a href={`tel:${SITE_CONFIG.phoneTel2}`} className="font-semibold text-white hover:underline">{SITE_CONFIG.phone2}</a>
           </p>
         </div>
       </section>

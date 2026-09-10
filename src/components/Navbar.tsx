@@ -14,7 +14,7 @@ import HtmlLangSync from './HtmlLangSync';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { t } = useLang();
-  const { name, phone, phoneTel, phone2, phoneTel2 } = SITE_CONFIG;
+  const { name, phone, phoneTel } = SITE_CONFIG;
   const pathname = usePathname();
   const navRef = useRef<HTMLElement>(null);
 
@@ -186,20 +186,13 @@ export default function Navbar() {
             </ul>
 
             <div className="mobileMenuFooter border-t border-subtle pt-4 flex flex-col gap-6">
-              {/* <a
+              <a
                 href={`tel:${phoneTel}`}
                 className="btn btn-whatsapp w-full btn-lg"
                 aria-label={`Call us at ${phone}`}
               >
                 {t('call_cta')} — {phone}
               </a>
-              <a
-                href={`tel:${phoneTel2}`}
-                className="btn btn-whatsapp w-full btn-lg"
-                aria-label={`Call us at ${phone2}`}
-              >
-                {t('call_cta')} — {phone2}
-              </a> */}
               <Link
                 href="/hire"
                 className="btn btn-primary w-full btn-lg"

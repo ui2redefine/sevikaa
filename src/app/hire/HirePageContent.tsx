@@ -7,7 +7,7 @@ import { Phone, Mail } from 'lucide-react';
 
 export default function HirePageContent() {
   const { t } = useLang();
-  const { phone, phoneTel, phone2, phoneTel2, email, whatsapp, whatsappMessage } = SITE_CONFIG;
+  const { phone, phoneTel, email, whatsapp, whatsappMessage } = SITE_CONFIG;
 
   return (
     <div className="hirePage min-h-screen bg-surface-subtle">
@@ -43,13 +43,6 @@ export default function HirePageContent() {
               aria-label={`Call ${phone}`}
             >
               <Phone size={16} /> {phone}
-            </a>
-            <a
-              href={`tel:${phoneTel2}`}
-              className="btn btn-primary w-full justify-center"
-              aria-label={`Call ${phone2}`}
-            >
-              <Phone size={16} /> {phone2}
             </a>
           </div>
 

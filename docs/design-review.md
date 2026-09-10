@@ -116,6 +116,23 @@ a user seeing them "dead" has a stale service worker cached from an earlier `npm
   styles swapped for `text-muted`/`text-subtle`/`text-strong`. `btn-whatsapp` green still
   used for WhatsApp actions by design.
 
+## Follow-up round — photography + Apple-style visuals (2026-09-10)
+
+- Removed the secondary phone number (`+91 73971 76361`) everywhere; `phoneTel` /
+  `phone` is now the single contact number. Un-commented the mobile-drawer call button.
+- Added 4 branded lifestyle photos in `public/services/` (house-maid, cook, babysitter,
+  elder-care) via `SERVICE_IMAGES` in `serviceIcons.ts`.
+  - **Services page** — alternating left/right photo per service; the 2 without a photo
+    (patient-care, live-in-helper) fall back to a full-size `.icon-chip` placeholder.
+  - **Home service cards** — photo header (or icon placeholder) above the card body.
+- **Home hero** — right column is now a large framed photo with a floating rating badge
+  (replaced the stat-card grid); a slim 4-up stats strip sits directly under the hero.
+- **Home** — new full-bleed image band ("Care you can count on, at home") between
+  How-It-Works and testimonials, using `next/image` fill + a `#12192e/60` overlay.
+- New i18n keys `home_band_heading` / `home_band_sub` (en / kn / hi).
+- **Missing photos**: patient-care and live-in-helper have no photography and cannot be
+  generated here — they use the branded icon placeholder until real photos are supplied.
+
 ## Suggested implementation order
 
 1. **Bugs first** — A1, A2. Small, self-contained.

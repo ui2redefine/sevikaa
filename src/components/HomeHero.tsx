@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
-import { Phone, CheckCircle2, ArrowRight, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
+import { Phone, CheckCircle2, ArrowRight, MessageCircle, Star } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site.config';
 import { useLang } from '@/i18n/LanguageContext';
 
@@ -11,20 +12,13 @@ const TRUST_BADGE_KEYS = [
   'trust_support',
 ] as const;
 
-const STAT_KEYS = [
-  'stat_happy_families',
-  'stat_verified_helpers',
-  'stat_satisfaction',
-  'stat_rating',
-] as const;
-
 export default function HomeHero() {
   const { t } = useLang();
-  const { phone, phoneTel, phone2, phoneTel2, whatsapp, whatsappMessage, stats } = SITE_CONFIG;
+  const { phone, phoneTel, whatsapp, whatsappMessage, stats } = SITE_CONFIG;
 
   return (
     <section
-      className="heroSection hero-surface relative pt-10 pb-14 px-4 sm:px-6 overflow-hidden"
+      className="heroSection hero-surface relative pt-10 pb-20 lg:pb-14 px-4 sm:px-6 overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Decorative blobs — use surface tokens so they flip with the theme */}
@@ -85,11 +79,14 @@ export default function HomeHero() {
               <div className="text-xs font-medium text-muted">
                 {t('call_cta')} — {t('hero_free_consultation')}
               </div>
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 font-bold text-lg leading-tight" style={{ color: 'var(--accent-600)' }}>
-                <a href={`tel:${phoneTel}`} className="hover:underline" aria-label={`Call us at ${phone}`}>{phone}</a>
-                <span className="hidden sm:inline text-subtle font-normal" aria-hidden="true">·</span>
-                <a href={`tel:${phoneTel2}`} className="hover:underline" aria-label={`Call us at ${phone2}`}>{phone2}</a>
-              </div>
+              <a
+                href={`tel:${phoneTel}`}
+                className="font-bold text-lg leading-tight hover:underline"
+                style={{ color: 'var(--accent-600)' }}
+                aria-label={`Call us at ${phone}`}
+              >
+                {phone}
+              </a>
             </div>
           </div>
 
@@ -107,18 +104,28 @@ export default function HomeHero() {
           </ul>
         </div>
 
-        {/* Stats grid */}
-        <div className="heroStatsGrid grid grid-cols-2 gap-4" aria-label="Company statistics">
-          {stats.map(({ value }, i) => (
-            <div
-              key={value}
-              className="card flex flex-col items-center text-center gap-1 py-8 animate-fade-up"
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
-              <span className="text-3xl font-extrabold text-brand">{value}</span>
-              <span className="text-sm text-muted">{t(STAT_KEYS[i])}</span>
-            </div>
-          ))}
+        {/* Hero visual */}
+        <div className="heroVisual relative mx-auto w-full max-w-md lg:max-w-none animate-fade-up">
+          <Image
+            src="/services/house-maid.jpg"
+            alt="A verified Sevikaa helper at work in a family home"
+            width={750}
+            height={900}
+            priority
+            sizes="(max-width: 1024px) 28rem, 40vw"
+            className="w-full rounded-3xl object-cover aspect-[4/5] shadow-xl"
+          />
+          <div className="absolute -bottom-5 left-4 sm:-left-5 flex items-center gap-3 rounded-2xl bg-surface border border-subtle shadow-lg px-4 py-3">
+            <span className="flex items-center gap-1 text-2xl font-extrabold text-brand">
+              {stats[3].value.replace('★', '')}
+              <Star size={18} className="fill-current" aria-hidden="true" />
+            </span>
+            <span className="text-xs text-muted leading-tight">
+              {t('stat_rating')}
+              <br />
+              <span className="text-strong font-semibold">{stats[0].value} {t('stat_happy_families')}</span>
+            </span>
+          </div>
         </div>
       </div>
     </section>

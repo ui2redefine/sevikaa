@@ -16,8 +16,6 @@ export const SITE_CONFIG = {
   // ── Contact ────────────────────────────────────────────────
   phone: '+91 91803 04734',
   phoneTel: '+919180304734',
-  phone2: '+91 73971 76361',
-  phoneTel2: '+917397176361',
   email: 'contact@sevikaa.com',
   whatsapp: '919180304734',
   whatsappMessage: 'Hi Sevikaa! I need help finding a domestic helper.',

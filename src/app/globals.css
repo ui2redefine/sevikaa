@@ -180,6 +180,7 @@
 
   /* Brand colour helpers — use these instead of hardcoded blue-xxx */
   .text-brand    { color: var(--brand-700); }
+  .text-brand-600 { color: var(--brand-600); }
   .bg-brand      { background-color: var(--brand-700); }
   .bg-brand-50   { background-color: var(--brand-50); }
   .bg-brand-100  { background-color: var(--brand-100); }

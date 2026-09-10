@@ -7,7 +7,7 @@ import { useLang } from '@/i18n/LanguageContext';
 
 export default function AboutPageContent() {
   const { t } = useLang();
-  const { name, stats, phone, phoneTel, phone2, phoneTel2 } = SITE_CONFIG;
+  const { name, stats, phone, phoneTel } = SITE_CONFIG;
 
   const VALUES: { Icon: LucideIcon; titleKey: string; descKey: string }[] = [
     { Icon: ShieldCheck,    titleKey: 'about_val_trust',    descKey: 'about_val_trust_desc' },
@@ -108,8 +108,6 @@ export default function AboutPageContent() {
         <p className="text-muted text-sm mt-4">
           {t('call_cta')}:{' '}
           <a href={`tel:${phoneTel}`} className="font-semibold text-brand hover:underline">{phone}</a>
-          {' · '}
-          <a href={`tel:${phoneTel2}`} className="font-semibold text-brand hover:underline">{phone2}</a>
         </p>
       </section>
 

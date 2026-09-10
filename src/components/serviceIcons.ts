@@ -28,3 +28,11 @@ export const HOW_IT_WORKS_ICONS: Record<number, LucideIcon> = {
   2: Users,
   3: UserCheck,
 };
+
+/** Slug → photo (only the services we have real photography for). */
+export const SERVICE_IMAGES: Partial<Record<ServiceSlug, string>> = {
+  'house-maid': '/services/house-maid.jpg',
+  cook: '/services/cook.jpg',
+  babysitter: '/services/babysitter.jpg',
+  'elder-care': '/services/elder-care.jpg',
+};
