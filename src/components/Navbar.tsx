@@ -186,20 +186,6 @@ export default function Navbar() {
             </ul>
 
             <div className="mobileMenuFooter border-t border-subtle pt-4 flex flex-col gap-6">
-              <a
-                href={`tel:${phoneTel}`}
-                className="btn btn-whatsapp w-full btn-lg"
-                aria-label={`Call us at ${phone}`}
-              >
-                {t('call_cta')} — {phone}
-              </a>
-              <Link
-                href="/hire"
-                className="btn btn-primary w-full btn-lg"
-                onClick={() => setOpen(false)}
-              >
-                {t('hire_cta')}
-              </Link>
               <div className="flex items-center gap-4 pt-1">
                 <div className='flex items-center gap-2'>
                   <span className="text-sm font-medium">{t('nav_language')}:
