@@ -34,7 +34,7 @@ export default function AboutPageContent() {
           </div>
           <div className="shrink-0">
             <Image
-              src="/logo.jpg"
+              src="/sevikaa.jpg"
               alt={`${name} logo`}
               width={200}
               height={200}

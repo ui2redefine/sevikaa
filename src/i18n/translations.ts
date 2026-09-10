@@ -94,7 +94,7 @@ export const TRANSLATIONS: Record<LangCode, Record<string, string>> = {
     // ── About page ───────────────────────────────────────────
     about_since_badge: 'Serving Bangalore Families',
     about_heading: 'About',
-    about_intro: 'Welcome to Gruha Saathi — a trusted home service provider dedicated to helping families find reliable and trained domestic helpers. With over 5 years of experience and deep personal relationships with our helper community, we are more than a placement agency.',
+    about_intro: 'Welcome to Sevikaa — a trusted home service provider dedicated to helping families find reliable and trained domestic helpers. With over 5 years of experience and deep personal relationships with our helper community, we are more than a placement agency.',
     about_mission_heading: 'Our Mission',
     about_mission_p1: 'Our mission is to make every home comfortable and stress-free by connecting families with dependable, hardworking helpers. We understand the importance of having the right support at home — which is why we carefully assist in selecting suitable helpers based on your specific requirements.',
     about_mission_diff: 'What makes us different:',
@@ -188,7 +188,7 @@ export const TRANSLATIONS: Record<LangCode, Record<string, string>> = {
     pwa_ios_step3: 'Tap',
     pwa_ios_step3_label: '"Add" — done!',
     pwa_ios_got_it: 'Got it',
-    pwa_aria_label: 'Install Gruha Saathi app',
+    pwa_aria_label: 'Install Sevikaa app',
     pwa_dismiss: 'Dismiss install prompt',
 
     // ── ServiceCard ──────────────────────────────────────────
@@ -216,12 +216,12 @@ export const TRANSLATIONS: Record<LangCode, Record<string, string>> = {
 
     // ── Privacy page ─────────────────────────────────────────
     privacy_heading: 'Privacy Policy',
-    privacy_body: 'Gruha Saathi respects your privacy. We collect contact information you provide solely to match you with domestic helpers or employment opportunities. We do not sell your data to third parties.',
+    privacy_body: 'Sevikaa respects your privacy. We collect contact information you provide solely to match you with domestic helpers or employment opportunities. We do not sell your data to third parties.',
     privacy_contact_prefix: 'For questions, contact us at',
 
     // ── Terms page ───────────────────────────────────────────
     terms_heading: 'Terms of Service',
-    terms_body: "By using Gruha Saathi's services, you agree to use the platform for lawful purposes only. Placement fees, replacement policies, and service guarantees are agreed upon at the time of engagement.",
+    terms_body: "By using Sevikaa's services, you agree to use the platform for lawful purposes only. Placement fees, replacement policies, and service guarantees are agreed upon at the time of engagement.",
     terms_contact_prefix: 'For questions, contact us at',
     terms_last_updated: 'Last updated',
 

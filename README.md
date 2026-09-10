@@ -1,4 +1,4 @@
-# Gruha Saathi — Your Trusted Home Care Partner
+# Sevikaa — Your Trusted Home Care Partner
 
 Website for domestic helper placement services.
 
@@ -9,8 +9,8 @@ Website for domestic helper placement services.
 ## 🚀 Quick Start
 
 ```bash
-git clone git@ssh_github_gs:gruhasaathi/gruha_saathi.git
-cd gruha_saathi
+git clone git@ssh_github_gs:sevikaa/sevikaa.git
+cd sevikaa
 npm install
 cp .env.local.example .env.local   # fill in your keys
 npm run dev                        # → http://localhost:4700
@@ -77,12 +77,12 @@ To add proper PWA icons, place:
 
 1. Push to GitHub (already done if you're reading this ✅)
 2. Go to [vercel.com/new](https://vercel.com/new) → **Import Git Repository**
-3. Select `gruhasaathi/gruha_saathi` → **Import**
+3. Select `sevikaa/sevikaa` → **Import**
 4. Framework preset: **Next.js** (auto-detected)
 5. **Environment Variables** — add before first deploy:
    - `NEXT_PUBLIC_WEB3FORMS_KEY` → your Web3Forms access key
    - `NEXT_PUBLIC_GA_ID` → `G-XXXXXX` (optional)
-   - `NEXT_PUBLIC_SITE_URL` → `https://gruhasaathi.vercel.app` (or your custom domain)
+   - `NEXT_PUBLIC_SITE_URL` → `https://sevikaa.vercel.app` (or your custom domain)
 6. Click **Deploy** — done in ~2 minutes
 
 Every `git push` to `main` triggers a new production deploy automatically.
@@ -133,7 +133,7 @@ src/
     translations.ts     # All UI strings in EN, KN, HI
     LanguageContext.tsx  # React context + localStorage persistence
 public/
-  logo.jpg              # Business logo
+  sevikaa.jpg           # Business logo
   manifest.json         # PWA manifest
 scripts/
   deploy.sh             # One-command Vercel deploy

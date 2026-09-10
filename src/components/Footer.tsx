@@ -36,7 +36,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="footerBrand">
           <Link href="/" className="flex items-center gap-2 mb-3" aria-label={`${name} — Home`}>
-            <Image src="/logo.jpg" alt={`${name} logo`} width={40} height={40} className="rounded-lg" />
+            <Image src="/sevikaa.jpg" alt={`${name} logo`} width={40} height={40} className="rounded-lg" />
             <span className="text-white font-bold text-lg">{name}</span>
           </Link>
           <p className="text-sm leading-relaxed text-gray-400 mb-4">{t('footer_tagline')}</p>

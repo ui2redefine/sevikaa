@@ -75,7 +75,7 @@ export default function Navbar() {
               aria-label={`${name} — Home`}
             >
               <Image
-                src="/logo.jpg"
+                src="/sevikaa.jpg"
                 alt=""
                 width={36}
                 height={36}

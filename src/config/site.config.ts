@@ -7,20 +7,20 @@
 
 export const SITE_CONFIG = {
   // ── Business Identity ──────────────────────────────────────
-  name: 'Gruha Saathi',
+  name: 'Sevikaa',
   tagline: 'Your Trusted Home Care Partner',
   description:
-    'Gruha Saathi connects Bangalore families with verified, trained domestic helpers — house maids, cooks, nannies, elder care, and patient care. Fast placement. 100% verified.',
-  url: 'https://gruhasaathi.vercel.app', // ← update after deploy
+    'Sevikaa connects Bangalore families with verified, trained domestic helpers — house maids, cooks, nannies, elder care, and patient care. Fast placement. 100% verified.',
+  url: 'https://sevikaa.vercel.app', // ← update after deploy
 
   // ── Contact ────────────────────────────────────────────────
-  phone: '+91 77957 12371',
-  phoneTel: '+917795712371',
+  phone: '+91 91803 04734',
+  phoneTel: '+919180304734',
   phone2: '+91 73971 76361',
   phoneTel2: '+917397176361',
-  email: 'contact@gruhasaathi.com',
-  whatsapp: '917795712371',
-  whatsappMessage: 'Hi Gruha Saathi! I need help finding a domestic helper.',
+  email: 'contact@sevikaa.com',
+  whatsapp: '919180304734',
+  whatsappMessage: 'Hi Sevikaa! I need help finding a domestic helper.',
 
   // ── Address ────────────────────────────────────────────────
   address: {
@@ -34,9 +34,9 @@ export const SITE_CONFIG = {
 
   // ── Social ────────────────────────────────────────────────
   social: {
-    facebook: 'https://facebook.com/gruhasaathi',    // ← update with real URL
-    instagram: 'https://instagram.com/gruhasaathi',  // ← update with real URL
-    twitter: 'https://twitter.com/gruhasaathi',      // ← update or remove
+    facebook: 'https://facebook.com/sevikaa',    // ← update with real URL
+    instagram: 'https://instagram.com/sevikaa',  // ← update with real URL
+    twitter: 'https://twitter.com/sevikaa',      // ← update or remove
     youtube: '',
   },
 
@@ -89,7 +89,7 @@ export const SITE_CONFIG = {
       city: 'Bangalore',
       service: 'House Maid',
       rating: 5,
-      text: 'Found a reliable maid within 24 hours! The helper is hardworking and trustworthy. Gruha Saathi made the whole process stress-free.',
+      text: 'Found a reliable maid within 24 hours! The helper is hardworking and trustworthy. Sevikaa made the whole process stress-free.',
     },
     {
       name: 'Rajesh Kumar',
@@ -110,7 +110,7 @@ export const SITE_CONFIG = {
       city: 'Bangalore',
       service: 'Patient Care',
       rating: 5,
-      text: 'Very professional patient care attendant for my mother post-surgery. Gruha Saathi verified everything — total peace of mind.',
+      text: 'Very professional patient care attendant for my mother post-surgery. Sevikaa verified everything — total peace of mind.',
     },
   ],
 
@@ -123,7 +123,7 @@ export const SITE_CONFIG = {
 
   // ── SEO / OG ──────────────────────────────────────────────
   ogImage: '/og-image.png',
-  twitterHandle: '@gruhasaathi',
+  twitterHandle: '@sevikaa',
   /** PWA / browser tab theme colour — matches --brand-700 in globals.css */
   themeColor: '#047857',
   keywords: [
@@ -136,8 +136,8 @@ export const SITE_CONFIG = {
     'cook helper Bangalore',
     'live-in helper Bangalore',
     'domestic staff agency Bengaluru',
-    'Gruha Saathi',
-    'gruhasaathi',
+    'Sevikaa',
+    'sevikaa',
   ],
 
   // ── Supported languages ───────────────────────────────────
@@ -163,19 +163,19 @@ export const SITE_CONFIG = {
   pageMeta: {
     home: {
       // title comes from name + tagline (see layout.tsx template)
-      description: 'Gruha Saathi connects Bangalore families with verified, trained domestic helpers — house maids, cooks, nannies, elder care & patient care. Fast placement.',
+      description: 'Sevikaa connects Bangalore families with verified, trained domestic helpers — house maids, cooks, nannies, elder care & patient care. Fast placement.',
     },
     hire: {
       title: 'Hire a Helper',
-      description: 'Request a verified domestic helper — house maid, cook, nanny, elder or patient care. Gruha Saathi calls you back in 30 minutes with matched profiles.',
+      description: 'Request a verified domestic helper — house maid, cook, nanny, elder or patient care. Sevikaa calls you back in 30 minutes with matched profiles.',
     },
     join: {
       title: 'Join as Helper',
-      description: 'Register as a domestic helper with Gruha Saathi — maids, cooks, nannies, elder care. Free registration. Find steady work near your home.',
+      description: 'Register as a domestic helper with Sevikaa — maids, cooks, nannies, elder care. Free registration. Find steady work near your home.',
     },
     about: {
       title: 'About Us',
-      description: 'Gruha Saathi — trusted domestic helper placements in Bangalore. We personally know and verify every helper we place.',
+      description: 'Sevikaa — trusted domestic helper placements in Bangalore. We personally know and verify every helper we place.',
     },
     services: {
       title: 'Our Services',
@@ -183,15 +183,15 @@ export const SITE_CONFIG = {
     },
     contact: {
       title: 'Contact Us',
-      description: 'Get in touch with Gruha Saathi for domestic helper services in Bangalore. Call, WhatsApp, or use our contact form.',
+      description: 'Get in touch with Sevikaa for domestic helper services in Bangalore. Call, WhatsApp, or use our contact form.',
     },
     privacy: {
       title: 'Privacy Policy',
-      description: 'Privacy policy for Gruha Saathi — how we collect, use, and protect your personal information.',
+      description: 'Privacy policy for Sevikaa — how we collect, use, and protect your personal information.',
     },
     terms: {
       title: 'Terms of Service',
-      description: 'Terms of service for Gruha Saathi domestic helper placement services.',
+      description: 'Terms of service for Sevikaa domestic helper placement services.',
     },
   },
 } as const;
